@@ -1,11 +1,13 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import Link from '@docusaurus/Link';
 
 type FeatureItem = {
   title: string;
   Svg: React.ComponentType<React.ComponentProps<'svg'>>;
   description: JSX.Element;
+  link?: string;
 };
 
 const FeatureList: FeatureItem[] = [
@@ -30,18 +32,18 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Soccer Simulation 2D',
+    Svg: require('@site/static/img/ss2d.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        The RoboCup 2D Simulated Soccer League is the oldest of the RoboCup Soccer Simulation Leagues. It consists of a number of competitions with computer simulated soccer matches as the main event.
       </>
     ),
+    link: 'https://rcsoccersim.github.io/'
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, Svg, description, link}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -50,6 +52,13 @@ function Feature({title, Svg, description}: FeatureItem) {
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
+        {link && (
+          <Link
+            className="button button--secondary button--lg"
+            to={link}>
+            Learn More
+          </Link>
+        )}
       </div>
     </div>
   );
