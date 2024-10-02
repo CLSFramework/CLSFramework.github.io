@@ -1,41 +1,34 @@
-# Website
+# CLSFramework Website
+This is the repository for the CLSFramework website. The website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-### Installation
+## Run the website locally
 
+1. Clone the repository
+2. Install the dependencies
+```bash
+npm install
 ```
-$ yarn
+3. Run the development server
+```bash
+npm start
 ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Local Development
-
+## Build the website
+1. Run the build command
+```bash
+npm run build
 ```
-$ yarn start
-```
+2. The build files will be in the `build` directory.
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+## How to contribute
+1. Fork the repository
+2. Create a new branch
+3. Make your changes
+4. Create a pull request
 
-### Build
 
-```
-$ yarn build
-```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-### Deployment
 
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
