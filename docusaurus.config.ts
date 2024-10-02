@@ -100,19 +100,19 @@ const config: Config = {
           ],
         },
         {
-          title: 'Community',
+          title: 'Links',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Github Organization',
+              href: 'https://github.com/CLSFramework',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'RCSS Proxy',
+              href: 'https://github.com/CLSFramework/soccer-simulation-proxy',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'Playmaker Server Python',
+              href: 'https://github.com/CLSFramework/playmaker-server-python',
             },
           ],
         },
@@ -122,10 +122,6 @@ const config: Config = {
             {
               label: 'Blog',
               to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
             },
           ],
         },

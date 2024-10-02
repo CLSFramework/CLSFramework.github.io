@@ -1,3 +1,0 @@
-# RCSSSERVER
-
-TODO
