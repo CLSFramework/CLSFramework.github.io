@@ -1,0 +1,51 @@
+---
+sidebar_position: 20
+title: TODO
+---
+
+# TODO
+
+- Introduction
+  - RoboCup and Soccer Simulation 2D
+  - What is CLSFramework?
+  - Cpp base problems
+  - Why not develop a base code for each language?
+  - How does the CLSFramework work?
+- How to Start?
+- Definitions
+- Soccer Simulation Proxy
+  - What is Soccer Simulation Proxy?
+  - How to use Soccer Simulation Proxy?
+    - Services
+  - How to use AppImage?
+  - How to build from source?
+- IDL
+  - Services
+  - State
+  - Action
+- Sample Playmaker Servers
+  - C\# gRPC
+  - Python gRPC
+  - Python THRIFT
+  - JavaScript gRPC
+- Starter CLS Python Base Code
+  - Pyrus Geom Library
+- Soccer Simulation Server
+  - What is Soccer Simulation Server?
+  - How to install Soccer Simulation Server?
+  - How to run Soccer Simulation Server?
+  - How to use AppImage?
+  - How to build from source?
+  - How to run Soccer Simulation Server on Windows? (TBD docker)
+- Soccer Simulator Monitor
+  - What is Soccer Simulator Monitor?
+  - How to install Soccer Simulator Monitor?
+  - How to run Soccer Simulator Monitor?
+  - How to use AppImage?
+  - How to build from source?
+- Soccer Window2
+  - What is Soccer Window2?
+  - How to install Soccer Window2?
+  - How to run Soccer Window2?
+  - How to use AppImage?
+  - How to build from source?
