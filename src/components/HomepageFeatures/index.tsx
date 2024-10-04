@@ -12,24 +12,15 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Sample Python Base Code (gRPC)',
+    Svg: require('@site/static/img/pythoncslf.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        The Python Base Code is a simple example of how to use the CLSF API to create a team for the 2D Soccer Simulation League.
+        By this code, you can create a powerful team that can compete in the league.
       </>
     ),
-  },
-  {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
+    link: 'https://github.com/CLSFramework/sample-playmaker-server-python-grpc'
   },
   {
     title: 'Soccer Simulation 2D',
@@ -41,13 +32,24 @@ const FeatureList: FeatureItem[] = [
     ),
     link: 'https://rcsoccersim.github.io/'
   },
+  {
+    title: 'Toturial Video',
+    Svg: require('@site/static/img/youtube.svg').default,
+    description: (
+      <>
+        You can find the tutorial videos about the CLSFramework to learn how to create a team for the 2D Soccer Simulation League.
+        This video is a good start to learn how to create a team.
+      </>
+    ),
+    link: '/docs/Toturial%20Videos/persian'
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+      <div className="text--center" style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <Svg className={styles.featureSvg} role="img" style={{height: '150px', width: '220px', margin: 'auto'}}/>
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
@@ -68,7 +70,7 @@ export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        <div className="row" style={{justifyContent:'center'}}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}

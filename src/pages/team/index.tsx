@@ -63,8 +63,10 @@ export default function ReleasePage(): JSX.Element {
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Develop a soccer simulation team by using any programming language">
-      <main>
+      <main style={{width: '100%', justifyContent:'center', display: 'flex'}}>
+        <main style={{width: '75%'}}>
         <TeamFeature />
+        </main>
       </main>
     </Layout>
   );
