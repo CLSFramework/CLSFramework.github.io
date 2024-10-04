@@ -79,6 +79,8 @@ const config: Config = {
           label: 'Tutorial',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/release', label: 'Release', position: 'left'},
+        {to: '/team', label: 'Team', position: 'left'},
         {
           href: 'https://github.com/clsframework/clsframework.github.io',
           label: 'GitHub',
