@@ -3,11 +3,12 @@
  * and scoped locally.
  */
 
-.heroBanner {
+ .heroBanner {
   padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  color: white;
 }
 
 @media screen and (max-width: 996px) {
@@ -23,8 +24,23 @@
 }
 
 .heroBanner {
-  background-image: url('/img/ss2d.svg'); /* Relative to the `static` folder */
-  background-size: cover; /* Ensures the image covers the entire area */
   background-position: center; /* Centers the image */
+  position: relative;
   color: white;
+  z-index: 0; /* Ensure the heroBanner content is above the pseudo-element */
+}
+
+.heroBanner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/img/ss2d.svg'); /* Relative to the `static` folder */
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px); /* Adjust the value as needed */
+  z-index: -1; /* Ensure the pseudo-element is behind the content */
+  pointer-events: none; /* Allow interactions with content above the pseudo-element */
 }
