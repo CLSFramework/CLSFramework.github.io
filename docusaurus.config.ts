@@ -127,7 +127,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `🅭 <a target="_BLANK" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</a> License  ${new Date().getFullYear()} CLSFramework. Built with <a  target="_BLANK" href="https://docusaurus.io/">Docusaurus</a>`
     },
     prism: {
       theme: prismThemes.github,
