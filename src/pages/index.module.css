@@ -11,9 +11,19 @@
   color: white;
 }
 
+
+
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
+  }
+  .heroBanner h1 {
+    font-size: 2em!important;
+    text-align: left!important;
+  }
+  .heroBanner p {
+    font-size: 1em;
+    text-align: left;
   }
 }
 

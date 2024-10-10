@@ -24,7 +24,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Soccer Simulation 2D',
-    Svg: require('@site/static/img/ss2d.svg').default,
+    Svg: require('@site/static/img/ss2d_logo.svg').default,
     description: (
       <>
         The RoboCup 2D Simulated Soccer League is the oldest of the RoboCup Soccer Simulation Leagues. It consists of a number of competitions with computer simulated soccer matches as the main event.
@@ -47,13 +47,15 @@ const FeatureList: FeatureItem[] = [
 
 function Feature({title, Svg, description, link}: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx('col col--4')} style={{padding:'20px'}}>
       <div className="text--center" style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
         <Svg className={styles.featureSvg} role="img" style={{height: '150px', width: '220px', margin: 'auto'}}/>
       </div>
-      <div className="text--center padding-horiz--md">
+      <div className="text--center padding-horiz--md" style={{paddingBottom:'20px', paddingTop:'20px'}}>
         <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+        <p style={{textAlign:'justify'}}>
+          {description}
+          </p>
         {link && (
           <Link
             className="button button--secondary button--lg"

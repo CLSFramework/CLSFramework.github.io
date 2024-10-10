@@ -64,12 +64,12 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/clsf.png',
+    image: 'img/clsf_logo.jpg',
     navbar: {
       title: 'CLSF',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/clsf.svg',
+        alt: 'CLSF Logo',
+        src: 'img/clsf_logo.jpg',
       },
       items: [
         {
