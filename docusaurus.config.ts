@@ -64,12 +64,12 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/clsf.png',
+    image: 'img/clsf_logo.jpg',
     navbar: {
       title: 'CLSF',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/clsf.svg',
+        alt: 'CLSF Logo',
+        src: 'img/clsf_logo.jpg',
       },
       items: [
         {
@@ -127,7 +127,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `🅭 <a target="_BLANK" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</a> License  ${new Date().getFullYear()} CLSFramework. Built with <a  target="_BLANK" href="https://docusaurus.io/">Docusaurus</a>`
     },
     prism: {
       theme: prismThemes.github,
