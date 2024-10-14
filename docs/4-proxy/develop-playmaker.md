@@ -44,4 +44,4 @@ service Game {
 }
 ```
 
-You can find more information about the services and messages in the IDL section.
+You can find more information about the services and messages in the [IDL section](../3-idl/protobuf.md).

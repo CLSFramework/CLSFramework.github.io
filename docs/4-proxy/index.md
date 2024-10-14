@@ -10,6 +10,8 @@ Soccer Simulation Proxy is a rpc client (gRPC or Thrift) that bridges the gap be
 
 To run a game in the RoboCup Soccer Simulation 2D, you need to operate the rcssserver for hosting games, rcssmonitor to display them, and engage 12 agents (11 players and a coach) per team. Each cycle, agents receive data from the server and must execute actions such as dash and kick. Developing a team can be complex due to the environment's intricacy, typically necessitating C++ programming. However, our framework allows for other languages development, leveraging the helios-base features. By using Soccer Simulation Proxy, you can develop a team in any language supported by `gRPC` or `Thrift`, such as C#, C++, Dart, Go, Java, Kotlin, Node, Objective-C, PHP, Python, and Ruby. You just need to develop a gRPC server based on proto messages or a thrift server based on the thrift file to receive data (state) from the Soccer Simulation Proxy and send actions back to it. This way, you can focus on developing your team's strategy and AI algorithms without worrying about the server's complexity.
 
+You can find more information about the services and messages in the [IDL section](../3-idl/protobuf.md).
+
 ## Work Flow
 
 ```mermaid

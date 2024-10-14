@@ -9,6 +9,8 @@ The Soccer Simulation Server sends the observations to the proxy, which processe
 
 For more information, please refer to the [documentation](https://clsframework.github.io/).
 
+You can find more information about the services and messages in the [IDL section](../../3-idl/protobuf.md).
+
 ## Quick start
 
 ### Preparation
