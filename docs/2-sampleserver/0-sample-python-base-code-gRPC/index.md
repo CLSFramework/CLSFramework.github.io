@@ -16,7 +16,8 @@ For more information, please refer to the [documentation](https://clsframework.g
 Install the pre-requisites using the command below:
 
 ``` Bash
-sudo apt-get install fuse #Used to run AppImages
+sudo apt-get install fuse 
+#Used to run AppImages
 ```
 
 Clone this repository & install the required python libraries (such as gRPC). Don't forget to activate your virtual environment!
@@ -27,7 +28,8 @@ cd sample-playmaker-server-python-grpc
 # Activate venv/anaconda before this step!
 pip install -r requirements.txt
 
-./generate.sh # Generate the gRPC files
+./generate.sh 
+# Generate the gRPC files
 ```
 
 To download RoboCup Soccer 2D Server using the commands below:
@@ -63,6 +65,13 @@ Then we must run the proxy & the decisionmaking server:
 ``` Bash
 ./start-team.sh
 ```
+
+### Options
+
+- `-t team_name`: Specify the team name.
+- `--rpc-port PORT`: Specify the RPC port (default: 50051).
+- `-d`: Enable debug mode.
+
 
 Launch the opponent team, start the monitor app image. press <kbd>Ctrl</kbd> + <kbd>C</kbd> to connect to the server, and <kbd>Ctrl</kbd> + <kbd>K</kbd> for kick-off!
 

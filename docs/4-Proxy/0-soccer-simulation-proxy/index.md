@@ -3,19 +3,36 @@
 
 Developing a team can be complex due to the environment's intricacy, typically necessitating C++ programming. However, our framework allows for development in other languages by leveraging the [helios-base](https://github.com/helios-base/helios-base) features. By using **SoccerSimulationProxy**, you can develop a team in any language supported by **gRPC** or **Thrift**, such as **C#, C++, Dart, Go, Java, Kotlin, Node.js, Objective-C, PHP, Python, and Ruby**.
 
-To use **gRPC**, you can check out our [gRPC server](https://github.com/CLSFramework/sample-playmaker-server-python-grpc), which is based on proto messages and gRPC services. This server provides a helpful base to get more familiar with the gRPC implementation. 
+To use **gRPC**, you can check out our [gRPC server](../../2-sampleserver/0-sample-python-base-code-gRPC/index.md), which is based on proto messages and gRPC services. This server provides a helpful base to get more familiar with the gRPC implementation. 
 
-To use **Thrift**, you can check out our [thrift server](https://github.com/CLSFramework/sample-playmaker-server-python-thrift), which is based on proto messages and thrift services. This server provides a helpful base to get more familiar with the thrift implementation.
+To use **Thrift**, you can check out our [thrift server](../../2-sampleserver/1-sample-python-base-code-thrift/index.md), which is based on proto messages and thrift services. This server provides a helpful base to get more familiar with the thrift implementation.
 
 This allows you to focus on developing your team's strategy and AI algorithms without worrying about the server's underlying complexity.
 
-![image](https://github.com/user-attachments/assets/4daee216-1479-4acd-88f2-9e772b8c7837)
+```mermaid
+sequenceDiagram
+    participant SS as SoccerSimulationServer
+    participant SP as SoccerSimulationProxy
+    participant PM as PlayMakerServer
+    Note over SS,PM: Run
+    SP->>SS: Connect
+    SS->>SP: OK, Unum
+    SP->>PM: Register
+    PM->>SP: OK, ClientID
+    SS->>SP: Observation
+    Note over SP: Convert observation to State
+    SP->>PM: State
+    PM->>SP: Actions
+    Note over SP: Convert Actions to Low-Level Commands
+    SP->>SS: Commands
+```
 
+![cls](https://github.com/user-attachments/assets/4daee216-1479-4acd-88f2-9e772b8c7837)
 
 If you would like to develop a team or conduct research using **Python**, **C#**, or **JavaScript**, you can check the following links:
 
-- [Playmaker-Server-Python-grpc](https://github.com/CLSFramework/sample-playmaker-server-python-grpc)
-- [Playmaker-Server-Python-thrift](https://github.com/CLSFramework/sample-playmaker-server-python-thrift)
+- [Playmaker-Server-Python-grpc](../../2-sampleserver/0-sample-python-base-code-gRPC/index.md)
+- [Playmaker-Server-Python-thrift](../../2-sampleserver/1-sample-python-base-code-thrift/index.md)
 - [Playmaker-Server-CSharp](https://github.com/CLSFramework/playmaker-server-csharp)
 - [Playmaker-Server-NodeJs](https://github.com/CLSFramework/playmaker-server-nodejs)
 
@@ -28,7 +45,7 @@ To use this framework, follow the steps below in order:
 The **rcssserver** hosts the game. You can follow the instructions for setting it up in the [soccersimulation server](./../5-soccersimulation/0-server/index.md).
 
 ### 2. Run the **Playmaker-Server**
-Next, run one of the sample Playmaker Servers, such as this [gRPC Server](https://github.com/CLSFramework/sample-playmaker-server-python-grpc), to receive information from the agents and send appropriate actions back to the game.
+Next, run one of the sample Playmaker Servers, such as this [gRPC Server](../../2-sampleserver/0-sample-python-base-code-gRPC/index.md), to receive information from the agents and send appropriate actions back to the game.
 
 ### 3. Set up the **Soccer Simulation Proxy**
 Now, run the **Soccer Simulation Proxy** to connect to the **rcssserver** and handle information exchange between agents and the server. You can do this using AppImage, Docker, or by building from source. 
@@ -63,9 +80,7 @@ To watch the game, you can use either of the following:
 - **[rcssmonitor](https://github.com/rcsoccersim/rcssmonitor)**: A tool to visualize the game.
 - **[SoccerWindow2](https://github.com/helios-base/soccerwindow2)**: Another visualization tool for RoboCup Soccer Simulation.
 
-For instructions on how to run **rcssmonitor**, check the [Soccer Simulation Monitor Wiki](https://github.com/CLSFramework/cross-language-soccer-framework/wiki/Soccer-Simulation-Monitor).
-
-![Screenshot 2024-04-07 012226](https://github.com/Cyrus2D/SoccerSimulationProxy/assets/25696836/abb24e0c-61b9-497d-926f-941d1c90e2ee)
+For instructions on how to run **rcssmonitor**, check the [rcssmonitor](../../5-soccersimulation/1-monitor/index.md) or [soccer window 2](../../5-soccersimulation/2-soccerwindow/index.md).
 
 
 
@@ -161,9 +176,7 @@ To watch the game, you can use either of the following:
 - **[rcssmonitor](https://github.com/rcsoccersim/rcssmonitor)**: A tool to visualize the game.
 - **[SoccerWindow2](https://github.com/helios-base/soccerwindow2)**: Another visualization tool for RoboCup Soccer Simulation.
 
-For instructions on how to run **rcssmonitor**, check the [rcssmonitor](/docs/5-soccersimulation/1-monitor/index.md) or [soccer window 2](/docs/5-soccersimulation/2-soccerwindow/index.md).
-
-![Screenshot 2024-04-07 012226](https://github.com/Cyrus2D/SoccerSimulationProxy/assets/25696836/abb24e0c-61b9-497d-926f-941d1c90e2ee)
+For instructions on how to run **rcssmonitor**, check the [rcssmonitor](../../5-soccersimulation/1-monitor/index.md) or [soccer window 2](../../5-soccersimulation/2-soccerwindow/index.md).
 
 
 
