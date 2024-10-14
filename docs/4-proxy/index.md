@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+title: Soccer Simulation Proxy
+---
 # Soccer Simulation Proxy
 [![GitHub license](https://img.shields.io/github/license/helios-base/helios-base)](https://github.com/helios-base/helios-base/blob/master/LISENCE)
 
@@ -41,18 +45,18 @@ This new base code is powered by Helios-Base and gRPC, designed to assist resear
 
 To use this framework, follow the steps below in order:
 
-### 1. Start the **rcssserver**
+### 1 - Start the **rcssserver**
 The **rcssserver** hosts the game. You can follow the instructions for setting it up in the [soccersimulation server](./../5-soccersimulation/0-server/index.md).
 
-### 2. Run the **Playmaker-Server**
+### 2 - Run the **Playmaker-Server**
 Next, run one of the sample Playmaker Servers, such as this [gRPC Server](../../2-sampleserver/0-sample-python-base-code-gRPC/index.md), to receive information from the agents and send appropriate actions back to the game.
 
-### 3. Set up the **Soccer Simulation Proxy**
+### 3 - Set up the **Soccer Simulation Proxy**
 Now, run the **Soccer Simulation Proxy** to connect to the **rcssserver** and handle information exchange between agents and the server. You can do this using AppImage, Docker, or by building from source. 
 
 Here, we’ll explain how to run the Soccer Simulation Proxy using AppImage and build from the source.
 
-### 1 - AppImage
+### 4.1 - Use **AppImage**
 
 #### 1. Download the AppImage
  You can download the AppImage from the [release page](https://github.com/CLSFramework/soccer-simulation-proxy/releases) or use the following command to download the latest version:
@@ -84,7 +88,7 @@ For instructions on how to run **rcssmonitor**, check the [rcssmonitor](../../5-
 
 
 
-### 2 - Build from source, install, and run (Linux, WSL)
+### 4.2 - Build from **source, install, and run (Linux, WSL)**
 
 To build the soccer simulation proxy, you need to install the following dependencies:
 
