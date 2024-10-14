@@ -4,6 +4,9 @@ sidebar_position: 1
 
 # Soccer Simulation Monitor
 
+![image](https://github.com/user-attachments/assets/3cf14841-7607-47cb-8000-60f074f1cee2)
+
+
 Soccer Simulation Monitor is a graphical tool that allows you to monitor the soccer simulation server. It is a part of the Soccer Simulation 2D project. The monitor is used to visualize the soccer field, players, and the ball. It is also used to monitor the game state, such as the score, time, and the game mode. You can find more information about the monitor in the [repository](https://github.com/rcsoccersim/rcssmonitor).
 
 ## Use AppImage (Linux, WSL)

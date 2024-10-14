@@ -1,7 +1,3 @@
----
-sidebar_position: 4
----
-
 # Develop a New Playmaker Server
 
 To develop a Playmaker server, you need to creat a gRPC or Thrift server that receives data from the Soccer Simulation Proxy and sends actions back to it. This way, you can focus on developing your team's strategy and AI algorithms without worrying about the server's complexity.
