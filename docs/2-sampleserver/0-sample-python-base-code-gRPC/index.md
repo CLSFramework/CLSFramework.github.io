@@ -16,8 +16,7 @@ For more information, please refer to the [documentation](https://clsframework.g
 Install the pre-requisites using the command below:
 
 ``` Bash
-sudo apt-get install fuse 
-#Used to run AppImages
+sudo apt-get install fuse #Used to run AppImages
 ```
 
 Clone this repository & install the required python libraries (such as gRPC). Don't forget to activate your virtual environment!
@@ -28,8 +27,7 @@ cd sample-playmaker-server-python-grpc
 # Activate venv/anaconda before this step!
 pip install -r requirements.txt
 
-./generate.sh 
-# Generate the gRPC files
+./generate.sh # Generate the gRPC files
 ```
 
 To download RoboCup Soccer 2D Server using the commands below:
@@ -77,7 +75,7 @@ Launch the opponent team, start the monitor app image. press <kbd>Ctrl</kbd> + <
 
 ### Tutorial Video (English)
 
-TDB
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/hH-5rkhiQHg/0.jpg)](https://www.youtube.com/watch?v=hH-5rkhiQHg)
 
 ### Tutorial Video (Persian)
 
