@@ -41,7 +41,7 @@ const FeatureList: FeatureItem[] = [
         This video is a good start to learn how to create a team.
       </>
     ),
-    link: '/docs/Toturial%20Videos/persian'
+    link: '/docs/ToturialVideos/'
   },
 ];
 
