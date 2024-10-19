@@ -54,7 +54,7 @@ Developing a base code for each language is a time-consuming task that requires 
 
 To overcome these challenges, the CLSFramework can denoise information, create models, and send them to the PlayMaker-Server. The PlayMaker-Server can be developed in any language supported by gRPC and is responsible for making decisions and sending actions to the SoccerSimulationProxy, which then sends the actions to the RCSSServer. This approach simplifies the development process and allows for more efficient implementation of the required functionalities.
 
-## Work floW
+## Workflow
 
 ```mermaid
 sequenceDiagram
