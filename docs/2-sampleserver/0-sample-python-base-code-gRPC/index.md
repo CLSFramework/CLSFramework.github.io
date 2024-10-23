@@ -1,3 +1,7 @@
+---
+custom_edit_url: 'https://github.com/CLSFramework/sample-playmaker-server-python-grpc/blob/main/README.md'
+---
+
 # Sample Python Base Code (gRPC)
 
 [![Documentation Status](https://readthedocs.org/projects/clsframework/badge/?version=latest)](https://clsframework.github.io/docs/introduction/)
@@ -139,4 +143,4 @@ You can modify the rpc port by adding the argument `--rpc-port [VALUE]`, where t
 ## Citation
 
 - [Cross Language Soccer Framework](https://arxiv.org/pdf/2406.05621)
-- Zare, N., Sayareh, A., Sadraii, A., Firouzkouhi, A. and Soares, A., 2024. Cross Language Soccer Framework: An Open Source Framework for the RoboCup 2D Soccer Simulation. arXiv preprint arXiv:2406.05621.
+- Zare, N., Sayareh, A., Sadraii, A., Firouzkouhi, A. and Soares, A., 2024. Cross Language Soccer Framework: An Open Source Framework for the RoboCup 2D Soccer Simulation. arXiv preprint arXiv:2406.05621....
