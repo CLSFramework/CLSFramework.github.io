@@ -20,6 +20,30 @@ You can find more information about the services and messages in the [IDL sectio
 
 there are many different ways to run the base code, in the next section, we will explain the easiest way to run the base code.
 
+## Results
+
+### .vs Helios Base
+
+| Summary Statistics
+
+- **Game Count**: 100  
+- **Goals**: 234 : 143 (diff: 91)  
+- **Points**: 212 : 71 (diff: 141)  
+- **Average Goals**: 2.34 : 1.43 (diff: 0.91)  
+- **Average Points**: 2.12 : 0.71 (diff: 1.41)  
+- **Win**: 65, **Draw**: 17, **Lost**: 18  
+- **Win Rate**: 65.00%  
+- **Expected Win Rate**: 78.31%  
+- **95% Confidence Interval**: [55.65%, 74.35%]
+
+| Goals Distribution
+
+```mermaid
+xychart-beta
+    title "Diff Goals Distribution"
+    x-axis [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
+    y-axis "Percentage"
+    bar [4,2,5,7,17,27,19,13,4,2]
 ## Quick start
 
 ### Preparation
@@ -61,7 +85,7 @@ Finally, to watch the game, download the monitor from [the original repository](
 
 ### Running a game
 
-This section assumes you have installed the server & proxy using the scripts (as mentioned above).
+This section assumes you have download (installed) the server & proxy using the scripts (as mentioned above).
 
 To run a game, you must first run the RoboCup Soccer Server, then your team and opponent team, and finally the monitor.
 
@@ -101,7 +125,7 @@ To watch the game, you must run the rcssmonitor or soccerwindow2. press <kbd>Ctr
 
 ### start.py Arguments
 
-##### Team and Name Customization
+| Team and Name Customization
 
 | Argument                  | Short | Description                                                      | Default Value   |
 |---------------------------|-------|------------------------------------------------------------------|-----------------|
@@ -110,7 +134,7 @@ To watch the game, you must run the rcssmonitor or soccerwindow2. press <kbd>Ctr
 
 ---
 
-##### RPC Server Configuration
+| RPC Server Configuration
 
 | Argument                  | Short | Description                                                      | Default Value   |
 |---------------------------|-------|------------------------------------------------------------------|-----------------|
@@ -121,7 +145,7 @@ To watch the game, you must run the rcssmonitor or soccerwindow2. press <kbd>Ctr
 
 ---
 
-##### RoboCup Soccer Server Configuration
+| RoboCup Soccer Server Configuration
 
 | Argument                  | Short | Description                                                      | Default Value   |
 |---------------------------|-------|------------------------------------------------------------------|-----------------|
@@ -130,7 +154,7 @@ To watch the game, you must run the rcssmonitor or soccerwindow2. press <kbd>Ctr
 
 ---
 
-##### Agent Proxies
+| Agent Proxies
 
 | Argument                  | Short | Description                                                      | Default Value   |
 |---------------------------|-------|------------------------------------------------------------------|-----------------|
@@ -141,7 +165,7 @@ To watch the game, you must run the rcssmonitor or soccerwindow2. press <kbd>Ctr
 
 ---
 
-##### Debug and Logging Options
+| Debug and Logging Options
 
 | Argument                  | Short | Description                                                      | Default Value   |
 |---------------------------|-------|------------------------------------------------------------------|-----------------|
@@ -189,11 +213,70 @@ As seen in the figure, the proxy handles connecting to the server, receiving sen
 
 ## Other Solutions To Run The Base Code
 
-TODO
+### Running the base code with different rpc port
+
+In soccer simulation 2D games (official competitions), each agents (players and coach) should be run in a separate process. So, you need to connect each agent to a rpc server (each agent has a separate rpc server). In this case, you need to run the rpc server for each agent separately. You can use the following commands to run the rpc server for each agent for debugging purposes.
+
+| Note: For official competitions, tournament script will run each player/coach with separate command, so it will be like the next section, but the result will be the same as this section because the rpc server will be run for each agent separately.
+
+``` Bash
+python3 start.py --use-different-rpc-port
+// or
+./start.sh --use-different-rpc-port
+```
+
+### Running each agent and server separately
+
+In soccer simulation 2D games (official competitions), each agents (players and coach) should be run in a separate process. So, you need to connect each agent to a rpc server (each agent has a separate rpc server). You can use the following commands to run each agent and rpc server separately.
+
+``` Bash
+python3 start.py --goalie
+python3 start.py --player (you need to run this command 11 times)
+python3 start.py --coach
+// or
+./start.sh --goalie
+./start.sh --player (you need to run this command 11 times)
+./start.sh --coach
+```
+
+### Running the rpc server and proxy separately
+
+To run the rpc server and proxy separately, you can use the following commands.
+
+``` Bash
+python3 server.py
+cd scripts/proxy
+./start.sh --rpc-type=grpc
+```
 
 ## Create Binary
 
-TODO
+As you know python is an interpreted language and it is slow in comparison to C++. In official tournaments, an agent should send actions to the server in less than 100ms. Also, python may not be installed on the tournament server. So, you need to create a binary from your python code. You can use the following commands to create a binary from your python code.
+
+``` Bash
+cd scripts
+./create_binary.sh
+```
+
+After creating the binary, you can find it in the `scripts/binary` directory. In this directory, you can find the following files and directories:
+
+- `start.bin`: The binary file that behaves like the `start.py` script. So, by running this file, you can run one rpc server and 12 proxy agents (11 players and 1 coach).
+- `start`: The tournament script will run this file to run your team in the tournament. This file will run one agent and one rpc server on random port.
+- `startAll`: This script is available for testing purposes. By running this file, it will call the `start` file 12 times to run 12 agents and 12 rpc servers.
+- `scripts`: This directory contains the necessary files to run the proxy.
+- `src`: This directory contains the formations of your team.
+
+## How to debug your team
+
+There are three different solution for debugging your team:
+
+### Logging
+
+You can use the logging module to log the information in rpc server code. By default, the logs are stored in the `logs` directory. For example, `agentX_Y.log` is the log file for the agent with unum `X` and `Y` is the unique id of the agent in rpc server (This one is not important for you). `proxy.log` is the log file for the proxy for all agents. `start-team.log` is the log file for the `start.py` script.
+
+### Debug Mode
+
+If you enable the debug mode, the proxy agents will be run in debug mode, so you can check graphical logs in `soccerwindow2` application. You can use `message Log` or `message DebugClient` to send the debug information to the proxy and then proxy will save them in file or send them directly to the `soccerwindow2` application to show them in the graphical interface. For more information, you can check the [IDL section in the documentation](https://clsframework.github.io/docs/idl/protobuf).
 
 ## Test Performance by using AutoTest
 
