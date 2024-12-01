@@ -73,10 +73,52 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          type: 'dropdown',
+          to: 'docs/introduction/',
           position: 'left',
           label: 'Tutorial',
+          items: [
+            {
+              type: 'doc',
+              docId: 'introduction/index',
+              label: 'Introduction',
+            },
+            {
+              type: 'doc',
+              docId: 'definitions/index',
+              label: 'Defenitions',
+            },
+            {
+              type: 'doc',
+              docId: 'sampleserver/index',
+              label: 'Playmaker Server',
+            },
+            {
+              type: 'doc',
+              docId: "basecode/index",
+              label: 'Base Code',
+            },
+            {
+              type: 'doc',
+              docId: 'idl/index',
+              label: 'IDL',
+            },
+            {
+              type: 'doc',
+              docId: 'proxy/index',
+              label: 'Soccer Simulation Proxy',
+            },
+            {
+              type: 'doc',
+              docId: 'soccersimulation/index',
+              label: 'Soccer Simulation',
+            },
+            {
+              type: 'doc',
+              docId: 'ToturialVideos/index',
+              label: 'Tutorial Videos',
+            },
+          ]
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {to: '/release', label: 'Release', position: 'left'},

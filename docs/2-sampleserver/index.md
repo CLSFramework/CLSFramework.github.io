@@ -12,6 +12,7 @@ Playmaker servers are the decision-making servers that control the agents in the
 - Sample Playmaker Servers in Python by using Thrift [GitHub](https://github.com/CLSFramework/sample-playmaker-server-python-thrift)
 - Sample Playmaker Servers in C# by using gRPC [GitHub](https://github.com/CLSFramework/playmaker-server-csharp)
 - Sample Playmaker Servers in NodeJs by using gRPC [GitHub](https://github.com/CLSFramework/playmaker-server-nodejs)
+- Sample Playmaker Servers in Go by using gRPC [GitHub](https://github.com/CLSFramework/sample-playmaker-server-go-gRPC)
 
 ## Base Code
 
