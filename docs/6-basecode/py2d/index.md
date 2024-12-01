@@ -7,12 +7,12 @@ custom_edit_url: 'https://github.com/CLSFramework/py2d/blob/main/README.md'
 [![Documentation Status](https://readthedocs.org/projects/clsframework/badge/?version=latest)](https://clsframework.github.io/docs/introduction/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![alt text](image.png)
-
 PY2D Soccer Simulation Base Code is a base code for RoboCup 2D Soccer Simulation teams, which is written in Python.
 This base code is powered by the [Cross Language Soccer Framework](https://arxiv.org/pdf/2406.05621), which allows you to create a team by using any programming language that supports gRPC or Thrift.
 This base code uses `Helios Base` as a proxy to communicate with the RoboCup 2D Soccer Simulation server.
 PY2D base is the most power full base code for RoboCup 2D Soccer Simulation which developed in Python.
+
+![image](https://github.com/user-attachments/assets/60030b95-9e87-45f7-8986-49cdf4e6d2c5)
 
 For more information, please refer to the [documentation](https://clsframework.github.io/).
 
