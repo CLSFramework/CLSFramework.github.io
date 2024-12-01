@@ -100,7 +100,7 @@ const config: Config = {
             },
             {
               type: 'doc',
-              docId: 'idl/index',
+              docId: 'idl/protobuf',
               label: 'IDL',
             },
             {
